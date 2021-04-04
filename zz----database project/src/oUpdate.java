@@ -8,13 +8,13 @@ public class oUpdate {
 
 	// fetch shipping status and total number of books of an order by orderid
 	public static String orderUpdate(String s) {
-		return "select s.shipping_statsu, sum(r.quantity) from orders s, ordering r where s.order_id = r.order_id AND s.order_id ="
+		return "select s.shipping_status, sum(r.quantity) from orders s, ordering r where s.order_id = r.order_id AND s.order_id ="
 				+ s;
 	}
 
 	// update shipping status
 	public static String updateSS(String s) {
-		return "update orders set shipping_statsu = \"Y\" where order_id =" + s;
+		return "update orders set shipping_status = \"Y\" where order_id =" + s;
 	}
 
 	public static void start() throws SQLException {

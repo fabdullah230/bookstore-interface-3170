@@ -36,6 +36,7 @@ public class topN {
 		return "select title from book where ISBN = \"" + s + "\"";
 	}
 
+	//toString for debugging
 	public String toString() {
 		return "\nBook ISBN: " + ISBN + " | Order Quantity: " + quantity;
 	}
