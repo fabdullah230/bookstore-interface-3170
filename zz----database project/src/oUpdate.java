@@ -39,21 +39,21 @@ public class oUpdate {
 			return;
 		}
 		String quantity = null;
-		String shipping_statsu = null;
+		String shipping_status = null;
 
 		result.next();
-		shipping_statsu = result.getString(1);
+		shipping_status = result.getString(1);
 		quantity = result.getString(2);
 		
 		//handling non-existent orderID
-		if(shipping_statsu == null && quantity == null) {
+		if(shipping_status == null && quantity == null) {
 			System.out.println("Order ID does not exist");
 			return;
 		}
 
 		//printing out results
-		System.out.println("The Shipping status of " + n + " is " + shipping_statsu + " and " + quantity + " books ordered.");
-		if (shipping_statsu.equals("N")) {
+		System.out.println("The Shipping status of " + n + " is " + shipping_status + " and " + quantity + " books ordered.");
+		if (shipping_status.equals("N")) {
 			System.out.print("Are you sure to update the shipping status? (Yes=Y)");
 			String c = s.nextLine();
 			if (c.toLowerCase().equals("y")) {
